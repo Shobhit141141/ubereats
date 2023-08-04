@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <link rel="stylesheet" href="side.css">
+    <script src="https://kit.fontawesome.com/76343226ef.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div id="container">
+        <header id="header">
+                    
+             <div id="toggle"> 
+                 <div id="ball">  
+                 </div> 
+             </div> 
+             <input type="checkbox" id="but"> 
+     
+             <p id="logo">Uber<br>Eats</p>
+             <!-- <div id="usericon">
+                <i class="fa-solid fa-user" id="userabc"></i>
+            </div> -->
+            <div id="sign">
+                 <p id="signup">
+                    Sign up                    
+                 </p>
+            </div>         
+    </header>
+    </div>
+    <div class="intro">
+        
+        <img src="food.png" alt="food" class="foodimg">
+        <p class="orderfood" data-text="Order food to your Door">Order food to your Door</p>
+ 
+    </div>
+    
+    
+    
+    
+    
+    <div class="input">
+        <i class="fa-solid fa-location-dot" id="locationdot" ></i>
+        <input type="text" name="add" id="add" placeholder="enter address" >
+        <i class="fas fa-pizza-slice" id="locationdot"></i>
+        <input type="text" name="food" id="food" placeholder="enter cuisine">
+        <div id="findfoo">
+            <p id="findfood">Find Food</p>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <div class="mid">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAg6YgM7Vxg1RF_eOXtpBM0fOsltQDbwZjtQ&usqp=CAU" class="uberlogo" alt="">
+        <p class="app">Theres more to love in <br>app</p>
+        <div class="applink">
+            <a href="https://play.google.com/store/apps/details?id=com.ubercab.eats" class="linklink"> Get the app </a>
+        </div>
+    </div>
+    
+    
+    
+    
+   
+        
+    <section class="container2">
+        <div class="slider-wrapper">
+            <div class="slider">
+           
+                <img id="1" src="Indian.jpeg">
+      
+                <img id="2" src="Continental.jpeg">
+                <img id="3" src="Chinese.jpg">
+        
+            </div>
+            <div class="slider-nav">
+                <a href="#1"></a>
+                <a href="#2"></a>
+                <a href="#3"></a>
+            </div>
+        </div>
+        <br>
+        <p style="font-family: 'Borel', cursive; font-size:20px; text-align:center;">Try your favorite cuisine today! </p>
+    </section>
+    
+    
+    
+    
+    
+    
+    <div class="city">
+        <h3 class="citynames">Try the famous foods of</h3>
+        
+        <p class="city1">Delhi</p>
+        <p class="city2">Mumbai</p>
+        <p class="city3">Shimla</p>
+        <p class="city4">Hyderabad</p>
+        <p class="city5">Kolkata</p>
+        <p class="city6">Jaipur</p>
+        
+    </div>
+    
+    
+    
+    <br><br>
+    
+    
+    
+    <div class="foot">
+        <center><hr width="90%"></center>
+        
+        
+    </div>
+   
+    <div class="icons">
+            <center><p class="follow"> Follow us on</p></center>
+            <div class="iconset">
+            <a href="http://www.dtu.ac.in/" style="color:black;"><i class="fa-brands fa-facebook" id="fb"></i></a>
+            <i class="fa-brands fa-instagram" id="ig"></i>
+            <i class="fa-solid fa-envelope" id="mail"></i>
+            </div>
+    </div>
+    
+    
+    
+    
+    <div class="trademarks">
+        <p class="cc">Privacy Policy</p>
+        <p class="cc">Terms</p>
+        <p class="cc">Conditions</p>
+        <p class="cc">©2023 xyz eats Inc. </p>
+    </div>
+    
+    
+    <script src="side.js"></script>
+    
+    
+</body>
+</html>
