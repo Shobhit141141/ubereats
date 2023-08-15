@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Caveat+Brush&family=Gelasio&family=Merriweather:wght@700&family=Poppins&family=Press+Start+2P&display=swap');
+/*
+font-family: 'Borel', cursive;
+font-family: 'Caveat Brush', cursive;
+font-family: 'Gelasio', serif;
+font-family: 'Merriweather', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Press Start 2P', cursive;
+*/
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    
+    max-width: 100%;
+    
+}
+body{
+    background-color: black;
+    color:white;
+    transition: linear 0.4s;
+}
+body.open{
+    background-color: white;
+    color:black !important;
+}
+#toggle{ 
+     width:40px; 
+     height:22px; 
+     background-color:white; 
+     border:2px solid black; 
+     border-radius:16px; 
+     display: flex;
+     align-items: center;
+     transition: linear 0.3s;
+          
+ } 
+ #ball{ 
+     width:16px; 
+     height:16px; 
+     border:2px solid none; 
+     border-radius:50px; 
+     background-color:black; 
+     margin: 3px;
+     transition:linear 0.3s; 
+  
+ } 
+ #ball.open{ 
+     width:16px; 
+     height:16px; 
+     border:2px solid none; 
+     border-radius:50px; 
+     background-color:white; 
+     transform: translateX(16px);
+  
+  
+ } 
+  
+ #but{ 
+     position: relative;
+     left:-40px;
+     background-color: beige; 
+     border: 2px solid black; 
+     border-radius:6px; 
+     width:40px;
+     z-index:0; 
+     opacity:0; 
+  
+  
+  
+ } 
+  
+ #toggle.open{ 
+     width:40px; 
+     height:22px; 
+     background-color:black; 
+     border:2px solid black; 
+     border-radius:16px; 
+     
+  
+ }
+ .upper{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-left:20px;
+ }
+ 
+ /*-------------------*/
+ 
+ #header{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     align-items: center;
+     font-family: 'Poppins', sans-serif;
+     border:2px solid black;
+     width: 100%;
+     position: fixed;
+     top:0px;
+     z-index: 999;
+     background-color: black;
+     transition: linear 0.4s;
+ }
+ #header.open{
+     background-color: white;
+ }
+ #btn{
+     margin-right: 20px;
+     background-color: white;
+     border:2px solid black;
+     border-radius: 20px;
+     color:Black;
+     padding:5px;
+     font-weight: 1000;
+     transition: linear 0.4s;
+ }
+ #btn.open{
+     color:white;
+     background-color: black;
+ }
+ #logo-name{
+     font-size: 30px;
+     margin-right: 20px;
+     color:#ffc755;
+ }
+ #logo-name.open{
+     font-size: 30px;
+     margin-right: 20px;
+     color:black;
+ }
+
+ .intro{
+     width: 100%;
+     height: 100vh;
+     margin: 0;
+     padding: 0;
+     background-image: url('food.png');
+     background-size: cover; 
+     background-position: center center; 
+     background-repeat: no-repeat; 
+     
+     
+ }
+.intro-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: transparent;
+    top:30%;
+    gap:20px;
+    
+}
+.intro-page input,.intro-page input{
+    display: flex;
+    justify-content: center;
+    width:300px;
+    height: 50px;
+    border:2px solid black;
+    border-radius:16px;
+    margin:0px;
+    text-align:center;
+    font-size:20px;
+    font-family:'Poppins', sans-serif;
+    background-color: white;
+    font-weight: 1000;
+    color: black;
+    
+}
+.input1,.input2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    justify-content: center;
+}
+.intro-page i,.intro-page i{
+    position: relative;
+    font-size: 30px;
+    color:black;
+    background-color:transparent;
+    left:15%;
+    
+}
+#findfoo{
+    display: flex;
+    width:300px;
+    height:50px;
+    border:2px solid black;
+    background-color:black;
+    justify-content: center;
+    align-items: center;
+    border-radius:16px;
+    box-shadow: 5px 5px white;
+    transition:all 0.4s;
+}
+#findfood{
+    color:white;
+    font-size:20px;
+    font-family:'Poppins', sans-serif ;
+    
+}
+.input2{
+    transform: translateX(-5px);
+    
+}
+#findfoo{
+    transform: translateX(7px);
+}
+#findfoo:active{
+    box-shadow: none;
+    transform: translate(10px,5px);
+}
+
+.animation{
+    
+    padding-bottom: 40px;
+    background-color: transparent;
+    display: flex;
+    justify-content:center;
+    padding-left: 20px;
+    overflow: hidden;
+}
+.orderfood{
+    
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight:bolder;
+    color:#f7c610;
+    -webkit-text-stroke:1.5px black;
+    background-color: transparent;
+}
+.orderfood::after{
+    content:"|";
+    position: absolute;
+    right:0;
+    background-color:#fcc90f;
+    width: 100%;
+    animation: typing 2s steps(23) infinite, line 1s infinite;
+}
+@keyframes typing {
+    
+    to{
+        width:0%;
+    }
+}
+
+@keyframes line {
+    
+    50%{
+        color: transparent;
+    }
+}
+.app-promo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+#applink{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:350px;
+    height:50px;
+    border:2px solid black;
+    background-color:#ffc755;
+    border-radius: 16px;
+    margin: auto;
+    transition: linear 0.1s;
+    box-shadow: 5px 5px #2ada12;
+    transition: all 0.2s ease;
+}
+#applink:active{
+    transform:translate(10px,5px);
+    box-shadow: none;
+}
+#applink.open{
+    box-shadow: 5px 5px #1a1a1a;
+}
+#applink.open:active{
+    transform:translate(10px,5px);
+    box-shadow: none;
+}
+.linklink{
+    font-size: 20px;
+    text-decoration: none;
+    color:black;
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+}
+.app-promo p{
+    font-size: 25px;
+    font-family: 'poppins', serif;
+    margin-bottom: 10px;
+}
+.the-slider{
+    display: flex;
+    justify-content: center;
+}
+.container2{
+    padding:2rem;
+    display: inline;
+    position: relative;
+    
+    
+}
+.slider-wrapper{
+    position:relative;
+    max-width:48rem;
+    margin:0 10px;
+    
+}
+.slider{
+    display:flex;
+    aspect-ratio:16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: initial;
+    border-radius: 0.8rem;
+}
+.slider img{
+    flex:1 0 100%;
+    scroll-snap-align:start;
+    object-fit: cover;
+}
+.slider-nav{
+    display:flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom:1.25rem;
+    left:50%;
+    transform: translateX(-50%);
+    z-index:1;
+    background-color: transparent;
+}
+.slider-nav a{
+    width:0.8rem;
+    height:0.8rem;
+    border:2px solid black;
+    border-radius: 50%;
+    background-color: white;
+    opacity:1;
+    transition: opacity ease 2s;
+}
+.slider-nav a:hover{
+    opacity:1;
+    background-color:black;
+}
+
+.posts{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 45px;
+    justify-content: center;
+}
+.post1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    transform: translateX(-20px);
+}
+#food-details1 img,#food-details2 img, #food-details3 img, #food-details4 img, #food-details5 img, #food-details6 img{
+    width:300px;
+    height:175px;
+    
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    border-radius:10px;
+}
+#food-details1,#food-details2,#food-details3,#food-details4,#food-details5,#food-details6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 325px;
+    height: 225px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-family:'poppins', serif;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: linear 0.4s ease;
+}
+#food-details1.open{
+    border-color: black;
+    
+}
+#food-details2.open{
+    border:2px solid black;
+}
+#food-details3.open{
+    border:2px solid black;
+}
+#food-details4.open{
+    border:2px solid black;
+}
+#food-details5.open{
+    border:2px solid black;
+}
+#food-details6.open{
+    border:2px solid black;
+}
+
+.time{
+    position: relative;
+    font-size: 10px;
+    color:white;
+    font-weight: 1000;
+    left:20%;
+    width:50px;
+    height: 25px;
+    border: 2px solid white;
+    background: transparent;
+    backdrop-filter: blur(10px); 
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    z-index:1;
+}
+.horizon{
+    display: flex;
+    gap:100px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    
+}
+.rating{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:5px;
+    margin-right: 10px;
+}
+.rating p{
+    font-size: 14px;
+    
+}
+.rating i{
+    font-size: 10px;
+    
+}
+.details p{
+    font-size: 15px;
+    
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+}
+#food-place{
+    font-size: 10px;
+    
+}
+
+#footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    margin-top: 60px;
+    border-top:1px solid white;
+    margin-left:20px;
+    margin-right: 20px;
+    transition: linear 0.4s;
+}
+#footer.open{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    margin-top: 60px;
+    border-top:1.5px solid black;
+    margin-left:20px;
+    margin-right: 20px;
+}
+.foot1, .foot2,.foot3{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    font-family:arial;
+    gap:15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+.foot1 p{
+    font-size: 11px;
+    color:#ffc755;
+    line-height: 30px;
+}
+.foot1 p.open{
+    color:black;
+}
+.foot2 p{
+    font-size: 11px;
+    color:#ffc755;
+    line-height: 30px;
+}
+.foot2 p.open{
+    color:black;
+}
+.foot3 p{
+    font-size: 11px;
+    color:white;
+    line-height: 30px;
+    transition: linear 0.4s;
+}
+.foot3 p.open{
+    color:black;
+    background-color:#ffc755 ;
+    text-align: center;
+}
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+}
+.icons i{
+    font-size: 15px;
+}
+.contact-us{
+    display: flex;
+    flex-direction: column;
+    
+    margin-top: 30px;
+    
+}
+.contact-us p{
+    font-family: 'poppins', serif;
+    text-align: center;
+    color:#ffc755;
+    margin-bottom: 20px;
+}
+.contact-us p.open{
+    color:black;
+}
+.contact-us pre{
+    font-family: 'poppins', serif;
+    text-align: center;
+    
+    margin-top: 40px;
+}
